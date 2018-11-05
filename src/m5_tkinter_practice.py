@@ -77,7 +77,8 @@ def main():
     entry_box2.grid()
 
     new_entry_button = ttk.Button(frame1, text='new entry')
-    new_entry_button['command'] = (lambda: )
+    new_entry_button['command'] = (lambda: print_int(entry_box1, entry_box2))
+    new_entry_button.grid()
     # --------------------------------------------------------
     # ----------
     # TODO: 8. As time permits, do other interesting GUI things!
@@ -97,9 +98,13 @@ def print_contents(entry_box):
         print('goodbye')
 
 
-def print_int(entry_box):
+def print_int(entry_box1, entry_box):
+    a = entry_box1.get()
     contents_of_entry_box = entry_box.get()
-    for k in range(contents_of_entry_box):
+    if a == int:
+        for k in range(contents_of_entry_box):
+            print(a)
+
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
